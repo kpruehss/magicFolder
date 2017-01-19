@@ -8,8 +8,8 @@ read/write operations the program performs!
 
 What would need to happen?
 
-1. get filenames
-..*use `scandir()` on the invoking directory which returns an interator. Loop
+* get filenames
+  * use `scandir()` on the invoking directory which returns an interator. Loop
 through the iterator and split the filename and extension. Use conditionals
 to assign extensions to their arch-type ie. .txt to Documents.
 Then assign it all to a dictionary, using arch-types as key and the files as
