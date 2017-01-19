@@ -7,6 +7,7 @@ and then sort them into **dict**? Doing that might cut down on the number of
 read/write operations the program performs!
 
 What would need to happen?
+
 1. get filenames
   *use `scandir()` on the invoking directory which returns an interator. Loop
 through the iterator and split the filename and extension. Use conditionals
