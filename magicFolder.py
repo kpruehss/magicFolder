@@ -8,4 +8,5 @@ curDir = os.getcwd()
 with os.scandir(curDir) as list:
     for entry in list:
         if not entry.name.startswith('.') and entry.is_file():
-            print(entry.name)
+            print(entry.path)
+            
