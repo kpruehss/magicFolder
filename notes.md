@@ -1,5 +1,4 @@
-#Problem nots and analysis
----
+#Problem notes and analysis
 
 ##Sort files by file type
 Could I get filenames in full as a **list** and then split off the extension
