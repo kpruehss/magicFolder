@@ -13,3 +13,6 @@ What would need to happen?
 * Assign to a dictionary, using arch-types as key and the filenames as
 values
 * Move files to appropriate folder ie. _Documents_ to _~/Documents/_
+
+###_Used `iglob()` from `glob` module instead of `os.scandir()`_
+---
