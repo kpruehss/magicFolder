@@ -1,6 +1,5 @@
 import os, glob
-from collections import defaultdict
-
+from shutil import copyfile
 # get the current directory to run script on
 # curDir = os.getcwd()
 # testing scandir fucntionality. Will be removed later
@@ -60,5 +59,15 @@ def getFiles():
     return fileDict
     
 
-# files = getFiles()
+        # print(f"Types: {thing}" )
+        # print(f"File(s): {stuff}")
+# for each in files['Pictures']:
+#     print(each)
 # print(files)
+files = getFiles()
+for each in files['Pictures']:
+    os.rename(each, f'/home/kartug/Pictures/{each}')
+    print(f"{os.getcwd()}/{each} ----> /home/kartug/Pictures/{each}")
+
+# copyfile(files['Pictures'], '/home/kartug/Pictures/')
+# print(files["Documents"])
