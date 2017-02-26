@@ -48,26 +48,23 @@ def getFiles():
     for files in archiveTypes:
         archives.extend(glob.iglob(files))
 
-
     fileDict["Documents"].extend(documents)
     fileDict["Pictures"].extend(images)
     fileDict["Music"].extend(music)
     fileDict["Videos"].extend(video)
     fileDict["Archives"].extend(archives)
     
-    # print(fileDict)
     return fileDict
-    
 
-        # print(f"Types: {thing}" )
-        # print(f"File(s): {stuff}")
-# for each in files['Pictures']:
-#     print(each)
-# print(files)
 files = getFiles()
-for each in files['Pictures']:
-    os.rename(each, f'/home/kartug/Pictures/{each}')
-    print(f"{os.getcwd()}/{each} ----> /home/kartug/Pictures/{each}")
 
-# copyfile(files['Pictures'], '/home/kartug/Pictures/')
-# print(files["Documents"])
+# for each in files:
+#     if each == 'Documents':
+#         print(each)
+
+def moveFiles(files):
+    for each in files['Pictures']:
+        os.rename(each, f'/home/kartug/Pictures/{each}')
+        print(f"{os.getcwd()}/{each} ----> /home/kartug/Pictures/{each}")
+
+moveFiles(files)
